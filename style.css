@@ -1,0 +1,64 @@
+header {
+    background-color: rgb(201, 138, 201);
+    padding: 0;
+    margin: 0;
+}
+
+header h1 {
+    margin: 5px 5px 0px 5px;
+}
+
+nav {
+    padding: 3px;
+    background-color: #d6afd6;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    padding: 0px 10px 0px 10px;
+}
+
+nav a {
+    color: #6b546a;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(222, 190, 225);
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+form label {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: black;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(201, 138, 201);
+    text-align: center;
+}
+
+.form-inline-input label {
+    width: 100px;
+}
+
+.form-inline-input input {
+    width: 100px;
+}

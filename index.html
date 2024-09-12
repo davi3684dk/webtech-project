@@ -4,17 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="navigation">
-            <a href="">My Library</a>
-            <a href="">Wishlist</a>
-        </div>
+        <h1>IGDB</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">Games</a>
+                </li>
+                <li>
+                    <a href="">My Library</a>
+                </li>
+            </ul>
+        </nav>
     </header>
+    <main>
+        <form action="addgame.php" method="post">
+            <div class="form-inline-input">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title"><br>
+            </div>
 
+            <div class="form-inline-input">
+                <label for="year">Release Year</label>
+                <input type="number" name="year" id="year"><br>
+            </div>
+
+            <div class="form-inline-input">
+                <label for="developer">Developer</label>
+                <input type="text" name="developer" id="developer"><br>
+            </div>
+
+            <div class="form-inline-input">
+                <label for="publisher">Publisher</label>
+                <input type="text" name="publisher" id="publisher"><br>
+            </div>
+
+            <label for="description">Description</label> <br>
+            <textarea name="description" id="description"></textarea><br>
+
+            <label for="cover">Cover Image</label><br>
+            <input type="file" name="cover" id="cover" accept=".jpg, .png, .jpeg, .gif|image/*"><br>
+        
+            <label for="price">Price</label><br>
+            <input type="number" name="price" id="price"><br>
+
+            <label for="tags">Tags</label><br>
+            <select name="tags" id="tags" multiple>
+                <option value="horror">Horror</option>
+                <option value="rpg">RPG</option>
+                <option value="mmo">MMO</option>
+                <option value="jrpg">JRPG</option>
+                <option value="rythm">Rythm</option>
+                <option value="shooter">Shooter</option>
+            </select><br>
+
+            <label for="screenshots">Screenshots</label><br>
+            <input type="file" name="screenshots" id="screenshots" accept=".jpg, .png, .jpeg, .gif|image/*" multiple><br>
+
+            <input type="submit" name="submit" id="submit">
+        </form>
+    </main>
     <footer>
-
+        <a href="https://github.com/davi3684dk/webtech-project">Source</a>
     </footer>
 </body>
 </html>
