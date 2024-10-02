@@ -1,0 +1,120 @@
+:root {
+    --bg-color: rgb(32, 32, 32);
+    --head-color: rgb(50, 50, 50);
+    --font-color: rgb(185, 185, 185);
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+body {
+    background-color: var(--bg-color);
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: var(--head-color);
+    padding: 1px;
+    margin: 0;
+    box-shadow: 0px 2px 5px black;
+}
+
+header h1 {
+    margin: 5px 5px 0px 5px;
+    color: purple;
+}
+
+nav {
+    padding: 3px;
+    background-color: var(--head-color);
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    padding: 0px 10px 0px 10px;
+}
+
+nav a {
+    color: var(--font-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+form {
+    background-color: var(--head-color);
+    box-shadow: 5px 5px 5px 5px black;
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+}
+
+form input {
+    background-color: var(--bg-color);
+    color: white;
+    width: 100%;
+    border: 0;
+    height: 24px;
+    font-size: 18px;
+}
+
+form > div {
+    margin-bottom: 20px;
+}
+
+form textarea {
+    color: white !important;
+    background-color: var(--bg-color);
+    border: 0;
+    width: 100%;
+}
+
+form label {
+    font-size: 18px;
+    color: var(--font-color);
+}
+
+footer {
+    padding: 10px;
+    background-color: var(--head-color);
+    text-align: center;
+    box-shadow: 0px -2px 5px black;
+}
+
+.tags-list {
+    display: flex;
+    height: fit-content;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.tag-item {
+    margin: 5px;
+    background-color: var(--bg-color);
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.tag-remove-btn {
+    background-color: transparent;
+    border: 0;
+    color: red;
+}
+
+.nav-right {
+    float: right;
+}
