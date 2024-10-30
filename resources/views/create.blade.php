@@ -46,7 +46,7 @@
             <select name="tags" id="tags-dropdown">
                 <option value="addtag" disabled hidden>Add Tag</option>
                 @foreach ($tags as $tag)
-                    <option value="{{$tag}}">{{$tag}}</option>
+                    <option value="{{$tag->id}}">{{$tag->name}}</option>
                 @endforeach
             </select><br>
         </div>

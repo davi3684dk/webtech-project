@@ -22,14 +22,14 @@ function submitClicked() {
 
 document.getElementById("tags-dropdown").addEventListener("change", function () {
     let sel = document.getElementById("tags-dropdown");
-    let value = this.options[sel.selectedIndex].text;
+    let value = this.options[sel.selectedIndex].value;
 
     let tagParent = document.getElementById("tags");
 
     const tagDiv = document.createElement("div");
     tagDiv.className = "tag-item";
 
-    const node = document.createTextNode(value);
+    const node = document.createTextNode(this.options[sel.selectedIndex].text);
     const removebtn = document.createElement("button");
 
     const hiddenIn = document.createElement("input");
