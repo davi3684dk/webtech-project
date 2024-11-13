@@ -1,5 +1,5 @@
 <x-layout>
-    <form id="form" action="{{route("store")}}" method="post">
+    <form id="form" action="{{route("store")}}" method="post" class="form">
         @csrf
         <div>
             <label for="title">Title</label><br>

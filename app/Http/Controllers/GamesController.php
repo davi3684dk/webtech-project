@@ -17,7 +17,15 @@ class GamesController extends Controller
         return view("create", ["tags" => $tags]);
     }
 
-    public function store() {
+    public function store(Request $request) {
+
+        $validatedData = $request->validate([
+            "title" => "required|max:128",
+            "year" => "required",
+            "developer" => "required",
+            "publisher" => "required",
+        ]);
+
         $game = new Game;
         $game -> title = request("title");
         $game -> year = request("year");

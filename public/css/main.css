@@ -53,7 +53,7 @@ nav a {
     text-decoration: none;
 }
 
-form {
+.form {
     background-color: var(--head-color);
     box-shadow: 5px 5px 5px 5px black;
     border-radius: 5px;
@@ -62,7 +62,13 @@ form {
     padding: 20px;
 }
 
-form input {
+.form a {
+    color: var(--font-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.form input {
     background-color: var(--bg-color);
     color: white;
     width: 100%;
@@ -71,18 +77,18 @@ form input {
     font-size: 18px;
 }
 
-form > div {
-    margin-bottom: 20px;
+.form > div {
+    margin: 20px 0px;
 }
 
-form textarea {
+.form textarea {
     color: white !important;
     background-color: var(--bg-color);
     border: 0;
     width: 100%;
 }
 
-form label {
+.form label {
     font-size: 18px;
     color: var(--font-color);
 }
@@ -117,4 +123,8 @@ footer {
 
 .nav-right {
     float: right;
+}
+
+.align-center {
+    text-align: center;
 }
