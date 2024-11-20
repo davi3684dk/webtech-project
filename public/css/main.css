@@ -134,10 +134,66 @@ footer {
     border: 2px solid white;
     box-shadow: 5px 5px black;
     display: inline-block;
-    padding: 5px;
+    width: 256px;
+    padding: 10px;
     color: var(--font-color);
+    line-height: 1;
+}
+
+.game-container li {
+    margin-top: 10px;
+    font-size: medium;
+    color: white;
+}
+
+.game-container li p {
+    font-size: small;
+    color: var(--font-color);
+}
+
+.game-cover-image {
+    width: 100%;
 }
 
 .game-title {
     font-weight: bold;
+}
+
+.game-user {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding-top: 10px;
+    border-top: 1px solid black;
+    margin: 0;
+}
+
+.game-user input {
+    background: transparent;
+    vertical-align: middle;
+    color: rgb(148, 45, 45);
+}
+
+.game-user p,a {
+    display: inline;
+    margin: 0;
+    text-decoration: none;
+}
+
+.user-icon {
+    vertical-align: middle;
+}
+
+.login-form {
+    max-width: 20em;
+}
+
+.games-flex-box {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+}
+
+.profile-name {
+    color: white;
 }

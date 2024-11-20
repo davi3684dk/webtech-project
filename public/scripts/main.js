@@ -56,3 +56,7 @@ document.getElementById("tags-dropdown").addEventListener("change", function () 
 });
 
 document.getElementById("tags-dropdown").value = "addtag";
+
+function deleteClicked() {
+    return confirm('Are you sure you want to remove the game?');
+}

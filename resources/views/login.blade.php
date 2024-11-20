@@ -1,5 +1,5 @@
 <x-layout>
-    <form action="{{route("login")}}" method="POST" class="form">
+    <form action="{{route("login")}}" method="POST" class="form login-form">
         @csrf
         <div>
             <label for="email">Email</label><br>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GamesController;
 use App\Http\Controllers\LoginController;
@@ -10,10 +11,12 @@ Route::get('/', function () { return redirect()->route("index"); } );
 
 Route::get('/games', [GamesController::class, "index"])->name("index");
 
+Route::get('/user/{user}', [ProfileController::class, "get"])->name("user.profile");
+
 Route::get('/games/create', [GamesController::class, "create"])->name("create")
 -> middleware("auth");
 
-Route::delete('/games', [GamesController::class, "delete"])->name("games.delete")
+Route::delete('/games/{game}', [GamesController::class, "delete"])->name("games.delete")
 -> middleware("auth");
 
 Route::post('/games', [GamesController::class, "store"])->name("store")

@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Tag;
 use App\Models\Game;
+use App\Models\User;
 
 class GamesController extends Controller
 {
     public function index() {
         $games = Game::all();
-
         return view("index", ["games" => $games]);
     }
 
@@ -19,14 +19,10 @@ class GamesController extends Controller
         return view("create", ["tags" => $tags]);
     }
 
-    public function delete(Request $request) {
-        $request->validate([
-            "id" => "required"
-        ]);
+    public function delete(Game $game) {
+        $game->delete();
 
-        $id = request("id");
-
-        Game::where('id' == $id).delete();
+        return redirect()->back();
     }
 
     public function store(Request $request) {
