@@ -128,3 +128,16 @@ footer {
 .align-center {
     text-align: center;
 }
+
+.game-container {
+    background-color: var(--head-color);
+    border: 2px solid white;
+    box-shadow: 5px 5px black;
+    display: inline-block;
+    padding: 5px;
+    color: var(--font-color);
+}
+
+.game-title {
+    font-weight: bold;
+}

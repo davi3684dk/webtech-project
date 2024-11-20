@@ -9,12 +9,24 @@ use App\Models\Game;
 class GamesController extends Controller
 {
     public function index() {
-        return view("index");
+        $games = Game::all();
+
+        return view("index", ["games" => $games]);
     }
 
     public function create() {
         $tags = Tag::all();
         return view("create", ["tags" => $tags]);
+    }
+
+    public function delete(Request $request) {
+        $request->validate([
+            "id" => "required"
+        ]);
+
+        $id = request("id");
+
+        Game::where('id' == $id).delete();
     }
 
     public function store(Request $request) {
@@ -34,6 +46,7 @@ class GamesController extends Controller
         $game -> description = request("description");
         $game -> price = request("price");
         $game -> cover_id = null;
+        $game -> user_id = $request->user()->id;
         $game -> save();
 
         $tags = request("tag");

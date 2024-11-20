@@ -3,7 +3,7 @@
         @csrf
         <div>
             <label for="email">Email</label><br>
-            <input type="text" name="email" id="email" required><br>
+            <input type="text" name="email" id="email" required value="{{ old('email') }}"><br>
     
             <label for="password">Password</label><br>
             <input type="password" name="password" id="password" required><br>

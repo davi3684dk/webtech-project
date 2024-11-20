@@ -23,7 +23,7 @@ class LoginController extends Controller
 
         $credentials = $request->only("email", "password");
         if (Auth::attempt($credentials)) {
-            redirect()->intended("index")->withSuccess('Signed in');
+            return redirect()->route("index")->withSuccess('Signed in');
         }
 
         $valdiator['emailPassword'] = 'Email or Password is incorrect';
@@ -36,6 +36,6 @@ class LoginController extends Controller
             Auth::logout();
         }
  
-        return redirect('/');
+        return redirect()->route("index");
     }
 }
