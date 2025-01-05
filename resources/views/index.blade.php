@@ -3,7 +3,8 @@
         <h1 class="profile-name">{{$profile->name}}</h1>
     @endif
 
-    <div class="games-flex-box">
+    <div class="games-flex-box" id="games-list">
+        @if (isset($games))
         @foreach ($games as $game)
         <div class="game-container">
             <h2 class="game-title">{{ $game->title }}</h2>
@@ -43,6 +44,7 @@
 
         </div>
         @endforeach
+        @endif
     </div>
 
 </x-layout>

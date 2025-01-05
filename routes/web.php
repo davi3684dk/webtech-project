@@ -5,7 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GamesController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\APIController;
 
+
+Route::get('/api/', [APIController::class, "index"]);
 
 Route::get('/', function () { return redirect()->route("index"); } );
 

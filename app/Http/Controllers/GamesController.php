@@ -10,8 +10,7 @@ use App\Models\User;
 class GamesController extends Controller
 {
     public function index() {
-        $games = Game::all();
-        return view("index", ["games" => $games]);
+        return view("index");
     }
 
     public function create() {
