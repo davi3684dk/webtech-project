@@ -11,6 +11,6 @@ class ProfileController extends Controller
 {
     public function get(User $user) {
         $games = $user->games()->get();
-        return view("index", ["games" => $games, "profile" => $user]);
+        return view("profile", ["games" => $games, "profile" => $user]);
     }
 }

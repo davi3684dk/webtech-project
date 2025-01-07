@@ -13,6 +13,11 @@ class GamesController extends Controller
         return view("index");
     }
 
+    public function get(Game $game) {
+        return view("game", ["game" => $game]);
+    }
+
+
     public function create() {
         $tags = Tag::all();
         return view("create", ["tags" => $tags]);

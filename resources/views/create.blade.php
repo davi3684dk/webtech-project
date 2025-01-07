@@ -1,4 +1,6 @@
 <x-layout>
+    <script defer src="{{asset("scripts/create.js")}}"></script>
+
     <form id="form" action="{{route("store")}}" method="post" class="form">
         @csrf
         <div>

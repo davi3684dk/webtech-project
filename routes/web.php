@@ -19,6 +19,8 @@ Route::get('/user/{user}', [ProfileController::class, "get"])->name("user.profil
 Route::get('/games/create', [GamesController::class, "create"])->name("create")
 -> middleware("auth");
 
+Route::get('/games/{game}', [GamesController::class, "get"])->name("games.get");
+
 Route::delete('/games/{game}', [GamesController::class, "delete"])->name("games.delete")
 -> middleware("auth");
 
